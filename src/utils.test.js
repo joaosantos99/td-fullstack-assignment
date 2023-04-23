@@ -59,12 +59,12 @@ describe('Detect sums', () => {
     expect(resultThree).to.be.instanceof(Array);
     expect(resultThree).to.have.lengthOf(6);
     expect(resultThree).to.deep.equal([
-      { pA: 0, pB: 1, sum: 4 }, // check
+      { pA: 0, pB: 1, sum: 4 },
       { pA: 0, pB: 2, sum: 1 },
-      { pA: 0, pB: 2, sum: 3 }, // check
-      { pA: 0, pB: 3, sum: 4 }, // check
-      { pA: 1, pB: 2, sum: 4 }, // check
-      { pA: 2, pB: 3, sum: 4 }, // check
+      { pA: 0, pB: 2, sum: 3 },
+      { pA: 0, pB: 3, sum: 4 },
+      { pA: 1, pB: 2, sum: 4 },
+      { pA: 2, pB: 3, sum: 4 },
     ]);
   });
 });

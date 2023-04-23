@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { calculateResult } from './utils';
-import './App.css';
+import { calculateResult, detectSums } from './utils';
+import Calculator from './components/Calculator';
 
 class App extends Component {
   constructor(props) {
@@ -25,25 +25,15 @@ class App extends Component {
     const { input, result, error } = calculateResult(value);
     this.setState({ userInput: input, result, error });
     event.preventDefault();
+
+    detectSums([1, 2, 1, 2, 3]);
   }
 
   render() {
     const { userInput, result, error } = this.state;
     return (
       <div className="App">
-        <form className="App-form" onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-          { !error &&
-            <p>
-              <span>Result for input '{userInput}' is '{result}'</span>
-            </p>
-          }
-          { error &&
-            <p className="App-error">
-              {error}
-            </p>
-          }
-        </form>
+        <Calculator />
       </div>
     );
   }

@@ -37,7 +37,6 @@ export const detectSums = (array) => {
     output.push({ pA: Number(pA), pB: Number(pB), sum: Number(sum) });
   }
 
-  console.log('result', output);
   return output;
 };
 
@@ -46,9 +45,9 @@ export function calculateResult(input) {
   let error = null;
   let result = '';
   try {
-    result = detectSums(input);
+    result = detectSums(parsedInput);
   } catch (e) {
     error = e.message;
   }
-  return { input: parsedInput, result, error };
+  return { input: parsedInput, result, error: '' };
 }

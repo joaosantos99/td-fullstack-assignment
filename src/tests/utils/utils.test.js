@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 import { expect } from 'chai';
-import { detectSums } from '../../utils';
+import { detectSums } from '../../utilities/utils';
 
 describe('Detect sums', () => {
   it('should fail if input is not an array', () => {

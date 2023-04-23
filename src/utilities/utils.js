@@ -1,3 +1,4 @@
+// This function has a time and space complexity of O(n^3)
 export const detectSums = (array) => {
   if (!Array.isArray(array)) throw Error('Input is not an array');
 

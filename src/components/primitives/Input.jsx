@@ -11,10 +11,12 @@ const Input = ({ placeholder, inputValue, setInputValue, buttonFunction }) => {
           placeholder={placeholder}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          aria-label="input"
         />
         <button
           onClick={buttonFunction}
           className="w-12 h-12 flex justify-center items-center rounded-full bg-blue-700"
+          data-testid="button"
         >
           <PlaySvg />
         </button>

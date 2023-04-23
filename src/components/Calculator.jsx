@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Input from './primitives/Input';
 import List from './primitives/List';
-import { calculateResult } from '../utils';
+import { calculateResult } from '../utilities/utils';
 
 const Calculator = () => {
   const [inputValue, setInputValue] = useState('');
